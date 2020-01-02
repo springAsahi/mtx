@@ -40,7 +40,7 @@ Route::namespace('Admin')->prefix('admin')->middleware('CheckAdmin')->group(func
     Route::post('product/delete/{id}','ProductController@delete');//产品删除
 
     Route::get('roll','RollController@index');//滚动信息：列表
-    Route::post('roll/update','RollController@update');//滚动信息：修改
+    Route::post('roll/update/{id}','RollController@update');//滚动信息：修改
     Route::post('roll/delete/{id}','RollController@delete');//滚动信息：删除
 });
 
