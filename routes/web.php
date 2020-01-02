@@ -29,10 +29,19 @@ Route::post('/admin/login','Admin\LoginController@login');//提交登录
 Route::namespace('Admin')->prefix('admin')->middleware('CheckAdmin')->group(function (){
     Route::get('loginOut','LoginController@loginOut');//退出登录
     //主页
-    Route::get('index','IndexController@index')->name('index');//后台主页
+    Route::get('index','IndexController@index')->name('index');//后台主页：显示行业数据
+    Route::post('industry/update','IndustryController@update');//行业数据
+
     Route::get('enterpriseUser','EnterpriseUserController@index');//企业注册用户
-    Route::get('enterpriseUser/show/{id}','EnterpriseUserController@details');//企业用户详情
     Route::post('enterpriseUser/Update/{id}','EnterpriseUserController@update');//企业用户修改
+
+    Route::get('product','ProductController@index');//产品列表
+    Route::post('product/update','ProductController@update');//产品修改
+    Route::post('product/delete/{id}','ProductController@delete');//产品删除
+
+    Route::get('roll','RollController@index');//滚动信息：列表
+    Route::post('roll/update','RollController@update');//滚动信息：修改
+    Route::post('roll/delete/{id}','RollController@delete');//滚动信息：删除
 });
 
 /*

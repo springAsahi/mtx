@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 class RollController extends Controller
 {
     //滚动分布数据
-    public function index(Request $request){
+    public function index(){
 
     }
 }

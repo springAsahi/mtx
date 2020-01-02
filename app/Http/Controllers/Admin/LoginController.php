@@ -8,12 +8,13 @@
 namespace app\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
     //login
-    public function login(){
-
+    public function login(Request $request){
+        $username = $request->input('username');
     }
     //loginOut
     public function loginOut(){
