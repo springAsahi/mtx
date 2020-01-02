@@ -39,7 +39,7 @@ class UploadService
 
             $newName = md5(date("Y-m-d H:i:s").$clientName).".".$entension;
             $path = $file->move(public_path('images'),$newName);
-            $imgUrl = 'https://'.$_SERVER['HTTP_HOST'].'/weizhang/public/images/'.$newName;
+            $imgUrl = 'http://'.$_SERVER['HTTP_HOST'].'/mtx/public/images/'.$newName;
 
             return response()->json([
                 'status' => true,
