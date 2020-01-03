@@ -14,4 +14,5 @@ use Illuminate\Database\Eloquent\Model;
 class EnterpriseUser extends Model
 {
     protected $table = 'enterprise_user';
+    protected $fillable = ['enterprise_name','real_name','enterprise_duty','phone','username','password','pwd'];
 }

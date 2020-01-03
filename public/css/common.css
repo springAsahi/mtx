@@ -1,0 +1,180 @@
+.wrap{
+    width: 100%;
+}
+.main__head{
+    width: 100%;
+    height: 50px;
+    background: #000;
+}
+.head__con{
+    width: 1200px;
+    height: 50px;
+    /* background: red; */
+    margin: 0 auto;
+    display: flex;
+    /* justify-content: space-between; */
+}
+.head__con h1{
+    width: 500px;
+    height: 50px;
+
+}
+.head__con h1 a{
+    display: inline-block;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+.head__con h1 a i{
+    width: 315px;
+    /* text-align: center; */
+    display: inline-block;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.head__con h1 a img{
+    width: 135px;
+    height: 50px;
+}
+.tab__nav{
+    display: flex;
+}
+.tab__nav li a{
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 14px;
+    
+}
+.tab__nav li a:hover{
+    background: #f00;
+}
+.tab__nav-show{
+    background: #f00 !important;
+}
+/* content */
+.main__con{
+    width: 1200px;
+    margin: 0 auto 50px;
+}
+.main__title{
+    width: 100%;
+    height: 360px;
+    margin-bottom: 20px;
+}
+.main__title img{
+    width: 100%;
+    height: 360px;
+}
+
+
+/* footer */
+.main__footer{
+    width: 100%;
+    height: 100px;
+    background: #000;
+    justify-content: center;
+    color: #fff;
+}
+.footer__con{
+    width: 400px;
+    margin: 0 auto;
+
+}
+.main__footer section img{
+    width: 130px;
+    height: 50px;
+}
+.main__footer section h2{
+    line-height: 50px;
+    font-size: 16px;
+}
+.main__footer section{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+.main__footer p{
+    color: #ffd;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+/* 全局分页 */
+.main__current{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+}
+.main__current section{
+    margin-right: 5px;
+}
+.main__current a{
+    display: inline-block;
+    padding: 3px 5px;
+    background: #333;
+    color: #fff;
+}
+.page-active{
+    background:#c01012 !important;
+}
+
+
+
+.service__list {
+    width: 1200px;
+
+}
+
+.service__list li {
+    width: 388px;
+    height: 458px;
+    /* background: #f00; */
+    margin: 0 5px 10px 5px;
+    border: 1px solid #fff;
+}
+.service__list li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    
+}
+.service__list li:hover{
+    border: 1px solid #f00;
+}
+
+.service__list li img {
+    width: 388px;
+    height: 350px;
+}
+
+.service__list li section {
+    box-sizing: border-box;
+    padding-left: .5rem;
+}
+
+.service__list li section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f00;
+    line-height: 30px;
+}
+
+.service__list li section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.service__list li section h5 {
+    font-size: 12px;
+
+    color: #aaa;
+    line-height: 24px;
+}
