@@ -11,7 +11,7 @@ namespace app\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 
-class Index extends Controller
+class IndexController extends Controller
 {
     public function index(){
         return view('home.index');
