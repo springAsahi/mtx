@@ -18,14 +18,14 @@ class ProductController extends Controller
 {
     //服务类产品
     public function service(){
-        $data = Product::where('product_type',Product::PRODUCT_TYPE_SERVICE)->orderBy('created_at','desc')->paginate(10);
+        $data = Product::where('product_type',Product::PRODUCT_TYPE_SERVICE)->orderBy('created_at','desc')->paginate(9);
         return view('home/productService',[
             'data' => $data
         ]);
     }
     //核心产品
     public function core(){
-        $data = Product::where('product_type',Product::PRODUCT_TYPE_CORE)->orderBy('created_at','desc')->paginate(10);
+        $data = Product::where('product_type',Product::PRODUCT_TYPE_CORE)->orderBy('created_at','desc')->paginate(9);
         return view('home/productCore',[
             'data' => $data
         ]);
