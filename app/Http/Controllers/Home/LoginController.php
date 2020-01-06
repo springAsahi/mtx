@@ -58,7 +58,7 @@ class LoginController extends Controller
         if (empty($data)){
             return redirect('/home/login')->with('loginStatus','用户名或密码错误');
         }else{
-//            $request->session()->put('token',$data->id);
+            $request->session()->put('homeToken',$data->id);
             return redirect('/home/index')->with('loginStatus','登录成功');
         }
     }

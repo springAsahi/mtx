@@ -15,9 +15,7 @@ class CheckHome
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
         $token = session('homeToken');
-
         if (session()->has('homeToken') && !empty($token)){
             return $next($request);
         }else{

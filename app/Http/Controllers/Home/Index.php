@@ -10,10 +10,17 @@ namespace app\Http\Controllers\Home;
 
 
 use App\Http\Controllers\Controller;
+use App\Models\IndustryData;
+use App\Models\RollData;
 
 class Index extends Controller
 {
     public function index(){
-        return view('home.index');
+        $rollData     = RollData::get();
+        $industryData = IndustryData::first();
+        return view('home.index',[
+            'rollData'     => $rollData,
+            'industryData' => $industryData
+        ]);
     }
 }
