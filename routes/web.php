@@ -61,9 +61,9 @@ Route::post('/home/login','Home\LoginController@login');//登录
 //->middleware('CheckHome')
 Route::namespace('Home')->prefix('home')->group(function (){
     Route::get('index','IndexController@index')->name('homeIndex');//主页
-    Route::get('industry','IndustryController@index');//行业数据
-    Route::get('roll','RollController@index');//滚动信息
+//    Route::get('industry','IndustryController@index');//行业数据
+//    Route::get('roll','RollController@index');//滚动信息
     Route::get('product/service','ProductController@service');//服务类产品
-    Route::get('product/serviceDetails/{id}','ProductController@serviceDetails');//服务类产品
+    Route::get('product/serviceDetails/{id}','ProductController@serviceDetails');//服务类产品详情
     Route::get('product/core','ProductController@core');//核心产品
 });
