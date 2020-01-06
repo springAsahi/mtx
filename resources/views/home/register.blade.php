@@ -62,6 +62,18 @@
             color: #fff;
             border-radius: 5px;
         }
+        .go__login {
+            line-height: 30px;
+            text-align: right;
+            color: #f00;
+        }
+
+        .go__login a {
+            padding-right: 10px;
+            text-decoration: underline;
+            color: #f00;
+
+        }
     </style>
 </head>
 
@@ -94,6 +106,10 @@
             <input type="submit" value="注册">
         </section>
     </form>
+    <div class="go__login">
+        已有用户？
+        <a href="{{ url('/home/login') }}">去登录</a>
+    </div>
 </div>
 
 @if(!empty(session('registerStatus')))
