@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 use App\Models\IndustryData;
 use App\Models\RollData;
 
-class Index extends Controller
+class IndexController extends Controller
 {
     public function index(){
         $rollData     = RollData::get();

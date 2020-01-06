@@ -10,11 +10,13 @@ namespace app\Http\Controllers\Admin;
 
 
 use App\Http\Controllers\Controller;
+use App\Models\IndustryData;
 
 class IndexController extends Controller
 {
     //主页
     public function index(){
-
+        $data = IndustryData::first();
+        return view('',[]);
     }
 }

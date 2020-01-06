@@ -29,7 +29,7 @@ Route::post('/admin/login','Admin\LoginController@login');//提交登录
 Route::namespace('Admin')->prefix('admin')->middleware('CheckAdmin')->group(function (){
     Route::get('loginOut','LoginController@loginOut');//退出登录
     //主页
-    Route::get('index','IndexController@index')->name('index');//后台主页：显示行业数据
+    Route::get('index','IndexController@index')->name('adminIndex');//后台主页：显示行业数据
     Route::post('industry/update','IndustryController@update');//行业数据
 
     Route::get('enterpriseUser','EnterpriseUserController@index');//企业注册用户
@@ -59,11 +59,12 @@ Route::get('/home/register',function (){//注册页面
 Route::post('/home/register','Home\LoginController@register');//注册
 Route::post('/home/login','Home\LoginController@login');//登录
 
-Route::namespace('Home')->prefix('home')->middleware('checkHome')->group(function (){
-    Route::get('index','Index@index');//主页
+
+Route::namespace('Home')->prefix('home')->middleware('CheckHome')->group(function (){
+    Route::get('index','IndexController@index')->name('homeIndex');//主页
 //    Route::get('industry','IndustryController@index');//行业数据
 //    Route::get('roll','RollController@index');//滚动信息
     Route::get('product/service','ProductController@service');//服务类产品
-    Route::get('product/serviceDetails/{id}','ProductController@serviceDetails');//服务类产品
+    Route::get('product/serviceDetails/{id}','ProductController@serviceDetails');//服务类产品详情
     Route::get('product/core','ProductController@core');//核心产品
 });
