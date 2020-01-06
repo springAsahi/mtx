@@ -26,7 +26,7 @@ Route::get('/admin/login',function (){//登录页面
 
 Route::post('/admin/login','Admin\LoginController@login');//提交登录
 
-Route::namespace('Admin')->prefix('admin')->middleware('CheckAdmin')->group(function (){
+Route::namespace('Admin')->prefix('admin')->middleware('checkAdmin')->group(function (){
     Route::get('loginOut','LoginController@loginOut');//退出登录
     //主页
     Route::get('index','IndexController@index')->name('adminIndex');//后台主页：显示行业数据
@@ -60,7 +60,7 @@ Route::post('/home/register','Home\LoginController@register');//注册
 Route::post('/home/login','Home\LoginController@login');//登录
 
 
-Route::namespace('Home')->prefix('home')->middleware('CheckHome')->group(function (){
+Route::namespace('Home')->prefix('home')->middleware('checkHome')->group(function (){
     Route::get('index','IndexController@index')->name('homeIndex');//主页
 //    Route::get('industry','IndustryController@index');//行业数据
 //    Route::get('roll','RollController@index');//滚动信息

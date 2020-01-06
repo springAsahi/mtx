@@ -33,7 +33,7 @@ class ProductController extends Controller
     //服务类产品详情
     public function serviceDetails($id){
         $data = Product::find($id);
-        return view('home/productServiceDetails',[
+        return view('home/serviceDetails',[
             'data' => $data
         ]);
     }
