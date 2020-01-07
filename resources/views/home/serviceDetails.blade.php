@@ -110,7 +110,7 @@
                 <h2>{{ $data->product_name }}</h2>
                 <h3>规格：{{ $data->product_standards }}</h3>
                 {{--<h4>起订量：产品起订量</h4>--}}
-                <h5>价格：<i>￥{{ $data->price_low }}-{{ $data->price_high }}</i></h5>
+                <h5>价格：<i>￥{{ $data->price_low / 100  }}-{{ $data->price_high / 100 }}</i></h5>
             </div>
         </div>
         <section class="detail__title">————&nbsp;产品详情&nbsp;————</section>

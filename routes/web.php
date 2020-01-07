@@ -21,7 +21,7 @@ Route::get('/test', 'TestController@test');
  */
 
 Route::get('/admin/login',function (){//登录页面
-    return view('login/index');
+    return view('admin/login');
 })->name('adminLogin');
 
 Route::post('/admin/login','Admin\LoginController@login');//提交登录

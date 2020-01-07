@@ -80,7 +80,7 @@
 
 <body>
 <div class="logan__wrap">
-    <h2>登录</h2>
+    <h2>吉林省帮客跨境电商综合服务平台用户登录</h2>
     <form action="{{ url('/home/login') }}" method="post">
         <section>
             <input type="text" name="username" id="" placeholder="请输入用户名">
@@ -93,7 +93,7 @@
         </section>
     </form>
     <div class="go__login">
-        还没有用户？
+        还没有注册？
         <a href="{{ url('/home/register') }}">注册一个</a>
     </div>
 </div>

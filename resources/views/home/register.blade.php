@@ -107,7 +107,7 @@
         </section>
     </form>
     <div class="go__login">
-        已有用户？
+        已注册？
         <a href="{{ url('/home/login') }}">去登录</a>
     </div>
 </div>

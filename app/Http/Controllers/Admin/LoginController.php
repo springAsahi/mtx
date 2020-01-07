@@ -17,7 +17,7 @@ class LoginController extends Controller
     public function login(Request $request){
         $username = $request->input('username');
         $password = $request->input('password');
-        $data = Users::where('username',$username)->where('password',$password)->first();
+        $data = Users::where('username',$username)->where('password',md5(md5($password)))->first();
         if (empty($data)){
             return redirect()->route('adminLogin')->with('adminLoginStatus','username or password fail');
         }

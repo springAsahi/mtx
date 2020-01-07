@@ -82,7 +82,7 @@
                             <img src="{{ $value->product_img_url }}" alt="">
                         </div>
                         <section>
-                            <h3>￥{{ $value->price_low }}-{{ $value->price_high }}</h3>
+                            <h3>￥{{ $value->price_low / 100 }}-{{ $value->price_high / 100 }}</h3>
                             <h4>{{ $value->product_name }}</h4>
                             <h5>{{ $value->product_standards }}</h5>
                         </section>
