@@ -17,6 +17,8 @@ class IndexController extends Controller
     //主页
     public function index(){
         $data = IndustryData::first();
-        return view('',[]);
+        return view('admin/index',[
+            'data' => $data
+        ]);
     }
 }
