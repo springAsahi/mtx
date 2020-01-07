@@ -26,6 +26,12 @@
                 <li>
                     <a href="{{ url('home/product/core') }}">核心产品</a>
                 </li>
+                <li>
+                    <a href="http://www.alinewstar.com/strategic.html">省外贸名人墙</a>
+                </li>
+                <li>
+                    <a href="http://www.alinewstar.com/contact.html">联系我们</a>
+                </li>
             </ul>
         </div>
     </div>
