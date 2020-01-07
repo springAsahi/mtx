@@ -20,11 +20,13 @@
             height: 460px;
             /* background: #f00; */
             margin: 0 5px 10px 5px;
+            box-sizing: border-box;
+
         }
 
         .service__list li img {
-            width: 390px;
-            height: 350px;
+            width: 388px;
+            height: 348px;
         }
 
         .service__list li section {
