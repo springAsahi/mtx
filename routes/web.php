@@ -26,22 +26,32 @@ Route::get('/admin/login',function (){//登录页面
 
 Route::post('/admin/login','Admin\LoginController@login');//提交登录
 
+//Route::namespace('Admin')->prefix('admin')->group(function (){
 Route::namespace('Admin')->prefix('admin')->middleware('checkAdmin')->group(function (){
     Route::get('loginOut','LoginController@loginOut');//退出登录
     //主页
     Route::get('index','IndexController@index')->name('adminIndex');//后台主页：显示行业数据
     Route::post('industry/update','IndustryController@update');//行业数据
 
-    Route::get('enterpriseUser','EnterpriseUserController@index');//企业注册用户
+    Route::get('enterpriseUser/index',function (){
+        return view('admin/enterpriseUser');
+    });//企业注册用户页面
+    Route::get('enterpriseUser/list','EnterpriseUserController@index');
     Route::post('enterpriseUser/Update/{id}','EnterpriseUserController@update');//企业用户修改
 
-    Route::get('product','ProductController@index');//产品列表
+    Route::get('product/index',function (){
+        return view('admin/productList');
+    });//产品列表
+    Route::get('product/list','ProductController@index');//产品列表
     Route::post('product/update/{id}','ProductController@update');//产品修改
     Route::post('product/delete/{id}','ProductController@delete');//产品删除
 
-    Route::get('roll','RollController@index');//滚动信息：列表
+    Route::get('roll/index',function (){
+        return view('admin/rollData');
+    });//滚动信息页面
+    Route::get('roll/list','RollController@index');//滚动信息：列表
     Route::post('roll/update/{id}','RollController@update');//滚动信息：修改
-    Route::post('roll/delete/{id}','RollController@delete');//滚动信息：删除
+//    Route::post('roll/delete/{id}','RollController@delete');//滚动信息：删除
 });
 
 /*
