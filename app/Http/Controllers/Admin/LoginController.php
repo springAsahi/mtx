@@ -21,7 +21,7 @@ class LoginController extends Controller
         if (empty($data)){
             return redirect()->route('adminLogin')->with('adminLoginStatus','username or password fail');
         }
-        session(['adminToken',md5(md5($username.time().rand(100000,999999)))]);
+        $request->session()->put('adminToken',md5(md5($username.time().rand(100000,999999))));
         return redirect()->route('adminIndex')->with('adminLoginStatus','login success');
     }
     //loginOut

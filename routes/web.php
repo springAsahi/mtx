@@ -24,7 +24,7 @@ Route::get('/admin/login',function (){//登录页面
     return view('admin/login');
 })->name('adminLogin');
 
-Route::post('/admin/login','Admin\LoginController@login');//提交登录
+Route::post('admin/login','Admin\LoginController@login');//提交登录
 
 //Route::namespace('Admin')->prefix('admin')->group(function (){
 Route::namespace('Admin')->prefix('admin')->middleware('checkAdmin')->group(function (){

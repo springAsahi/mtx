@@ -15,8 +15,8 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
         $token = session('adminToken');
+//        dd($token);
         if (session()->has('adminToken') && !empty($token)){
             return $next($request);
         }else{
