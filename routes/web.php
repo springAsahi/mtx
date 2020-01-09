@@ -28,6 +28,7 @@ Route::post('/admin/login','Admin\LoginController@login');//提交登录
 
 //Route::namespace('Admin')->prefix('admin')->group(function (){
 Route::namespace('Admin')->prefix('admin')->middleware('checkAdmin')->group(function (){
+    Route::post('upload/img','IndexController@uploadImg');
     Route::get('loginOut','LoginController@loginOut');//退出登录
     //主页
     Route::get('index','IndexController@index')->name('adminIndex');//后台主页：显示行业数据
@@ -42,16 +43,21 @@ Route::namespace('Admin')->prefix('admin')->middleware('checkAdmin')->group(func
     Route::get('product/index',function (){
         return view('admin/productList');
     });//产品列表
+    Route::get('product/core/index',function (){
+        return view('admin/productCoreList');
+    });//产品列表
     Route::get('product/list','ProductController@index');//产品列表
     Route::post('product/update/{id}','ProductController@update');//产品修改
+    Route::post('product/save','ProductController@save');//产品修改
     Route::post('product/delete/{id}','ProductController@delete');//产品删除
 
     Route::get('roll/index',function (){
-        return view('admin/rollData');
+        return view('admin/rolldata');
     });//滚动信息页面
     Route::get('roll/list','RollController@index');//滚动信息：列表
     Route::post('roll/update/{id}','RollController@update');//滚动信息：修改
-//    Route::post('roll/delete/{id}','RollController@delete');//滚动信息：删除
+    Route::post('roll/save','RollController@save');//滚动信息：修改
+    Route::post('roll/delete/{id}','RollController@delete');//滚动信息：删除
 });
 
 /*

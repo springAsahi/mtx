@@ -26,6 +26,47 @@ class ProductController extends Controller
             'data' => $data
         ]);
     }
+    //添加
+    public function save(Request $request){
+        $product_name = $request->input('product_name');
+        $product_img_url = $request->input('product_img_url');
+        $product_standards = $request->input('product_standards');
+        $product_type    = $request->input('product_type');
+        $price = $request->input('price');
+        $price_low = $request->input('price_low');
+        $price_high = $request->input('price_high');
+        $product_details = $request->input('product_details');
+        $details_link = $request->input('details_link');
+        $lowest_order_number = $request->input('lowest_order_number');
+        $data = new Product();
+        $data->product_name = $product_name;
+        $data->product_img_url = $product_img_url;
+        $data->product_standards = $product_standards;
+        $data->product_type = $product_type;
+        if ($product_type   == Product::PRODUCT_TYPE_SERVICE){
+            $data->product_details = $product_details;
+            $data->price_low = $price_low * 100;
+            $data->price_high = $price_high * 100;
+        }
+        if ($product_type  == Product::PRODUCT_TYPE_CORE){
+            $data->price_low = $price_low * 100;
+            $data->price_high = $price_high * 100;
+            $data->details_link = $details_link;
+            $data->lowest_order_number = $lowest_order_number;
+        }
+        if ($data->save()){
+            return response()->json([
+                'status' => true,
+                'code' => '200',
+                'msg' => 'success'
+            ]);
+        }
+        return response()->json([
+            'status' => false,
+            'code' => '204',
+            'msg' => 'fail'
+        ]);
+    }
     //修改
     public function update(Request $request, $id){
         $product_name = $request->input('product_name');
@@ -42,14 +83,15 @@ class ProductController extends Controller
         $data->product_img_url = $product_img_url;
         $data->product_standards = $product_standards;
         if ($data->product_type == Product::PRODUCT_TYPE_SERVICE){
-            $data->price = $price * 100;
-            $data->details_link = $details_link;
-            $data->lowest_order_number = $lowest_order_number;
-        }
-        if ($data->product_type == Product::PRODUCT_TYPE_CORE){
             $data->product_details = $product_details;
             $data->price_low = $price_low * 100;
             $data->price_high = $price_high * 100;
+        }
+        if ($data->product_type == Product::PRODUCT_TYPE_CORE){
+            $data->price_low = $price_low * 100;
+            $data->price_high = $price_high * 100;
+            $data->details_link = $details_link;
+            $data->lowest_order_number = $lowest_order_number;
         }
         if ($data->save()){
             return response()->json([
@@ -68,11 +110,13 @@ class ProductController extends Controller
     public function delete($id){
         if (Product::destroy($id)){
             return response()->json([
-                'status' => true
+                'status' => true,
+                'msg'    => '成功'
             ]);
         }
         return response()->json([
-            'status' => false
+            'status' => false,
+            'msg'    => '失败'
         ]);
     }
 }

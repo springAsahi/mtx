@@ -11,6 +11,8 @@ namespace app\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\IndustryData;
+use App\Service\UploadService;
+use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
@@ -20,5 +22,10 @@ class IndexController extends Controller
         return view('admin/index',[
             'data' => $data
         ]);
+    }
+    //上传图片
+    public function uploadImg(Request $request){
+        $file = $request->file('file');
+        return UploadService::upload_img($file);
     }
 }

@@ -37,10 +37,12 @@ class EnterpriseUserController extends Controller
         if ($data->save()){
             return response()->json([
                 'status' => true,
+                'msg'    => '成功'
             ]);
         }
         return response()->json([
             'status' => false,
+            'msg'    => '失败'
         ]);
     }
 //    //删除

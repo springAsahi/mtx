@@ -52,6 +52,10 @@
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="test"  id="left_menu">
                 <li class="layui-nav-item"><a href="{{ url('admin/index') }}">首页</a></li>
+                <li class="layui-nav-item"><a href="{{ url('admin/enterpriseUser/index') }}">企业用户</a></li>
+                <li class="layui-nav-item"><a href="{{ url('admin/product/index') }}">服务类产品</a></li>
+                <li class="layui-nav-item"><a href="{{ url('admin/product/core/index') }}">核心类产品</a></li>
+                <li class="layui-nav-item"><a href="{{ url('admin/roll/index') }}">滚动信息</a></li>
             </ul>
         </div>
     </div>

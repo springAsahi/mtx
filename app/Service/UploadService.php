@@ -43,9 +43,11 @@ class UploadService
 
             return response()->json([
                 'status' => true,
-                'code' => '200',
+                'code' => '0',
                 'msg' => 'success',
-                'data' => $imgUrl
+                'data' => [
+                    'src' => $imgUrl
+                ]
             ]);
         }else{
             return response()->json([
