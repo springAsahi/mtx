@@ -114,7 +114,7 @@
             <img src="{{ $data->product_img_url }}" alt="">
             <div>
                 <h2>{{ $data->product_name }}</h2>
-                <h3>规格：{{ $data->product_standards }}</h3>
+                <h3>公司名称：{{ $data->product_standards }}</h3>
                 {{--<h4>起订量：产品起订量</h4>--}}
                 <h5>价格：<i>￥{{ $data->price_low / 100  }}-{{ $data->price_high / 100 }}</i></h5>
             </div>

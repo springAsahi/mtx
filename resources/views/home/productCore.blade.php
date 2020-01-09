@@ -107,7 +107,7 @@
         <ul class="core__list clearfix">
             @foreach($data as $key => $value)
             <li class="fl">
-                <a href="{{ $value->details_link }}">
+                <a href="{{ $value->details_link }}" target="_blank">
                     <div>
                         <img src="{{ $value->product_img_url }}" alt="">
                     </div>
