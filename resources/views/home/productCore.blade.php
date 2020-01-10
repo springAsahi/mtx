@@ -112,7 +112,7 @@
                         <img src="{{ $value->product_img_url }}" alt="">
                     </div>
                     <section>
-                        <h3><i>${{ $value->price_low / 100 }}-{{ $value->price_high / 100 }}</i><em>MOP：{{ $value->lowest_order_number }}</em></h3>
+                        <h3><i>${{ $value->price_low / 100 }}-{{ $value->price_high / 100 }}</i><em>MOQ：{{ $value->lowest_order_number }}</em></h3>
                         <h4>{{ $value->product_name }}</h4>
                         <h5>{{ $value->product_standards }}</h5>
                     </section>
