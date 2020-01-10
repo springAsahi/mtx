@@ -2,12 +2,8 @@ layui.use(['layer','table','form','jquery','laydate'], function(){
     var table = layui.table,
         layer = layui.layer,
         form  = layui.form,
-        laydate = layui.laydate,
         $ = layui.jquery;
-    //常规用法
-    laydate.render({
-        elem: '#deal_time'
-    });
+
     //渲染表格
     table.render({
         elem: '#list'
@@ -18,11 +14,12 @@ layui.use(['layer','table','form','jquery','laydate'], function(){
         ,page: true //开启分页
         ,cols: [[
             {field:'id', width:"7%", title: 'ID', }
-            ,{field:'corporate_name', width:"17%", title: '公司名称'}
+            ,{field:'corporate_name', width:"12%", title: '公司名称'}
             ,{field:'product_name', width:"16%", title: '产品名称'}
-            ,{field:'trade_name', width:"17%", title: '行业名称'}
+            ,{field:'trade_name', width:"12%", title: '行业名称'}
             ,{field:'country', width:"18%", title: '出口目的地国家'}
-            ,{field:'amount', width:"10%", title: '金额'}
+            ,{field:'amount', width:"7%", title: '金额'}
+            ,{field:'deal_time', width:"13%", title: '时间'}
             // ,{field:'price_high', width:"23%", title: '最高价格'}
             ,{field: 'right',toolbar: '#barDemo',width:"15%",title: '操作', }
         ]]

@@ -32,10 +32,12 @@ class RollController extends Controller
         $trade_name = $request->input('trade_name');
         $country = $request->input('country');
         $amount = $request->input('amount');
+        $deal_time = $request->input('deal_time');
         $data = RollData::find($id);
         $data->corporate_name = $corporate_name;
         $data->product_name = $product_name;
         $data->trade_name = $trade_name;
+        $data->deal_time = $deal_time;
         $data->country = $country;
         $data->amount = $amount;
         if ($data->save()){
@@ -58,11 +60,13 @@ class RollController extends Controller
         $trade_name = $request->input('trade_name');
         $country = $request->input('country');
         $amount = $request->input('amount');
+        $deal_time = $request->input('deal_time');
         $data = new RollData();
         $data->corporate_name = $corporate_name;
         $data->product_name = $product_name;
         $data->trade_name = $trade_name;
         $data->country = $country;
+        $data->deal_time = $deal_time;
         $data->amount = $amount;
         if ($data->save()){
             return response()->json([

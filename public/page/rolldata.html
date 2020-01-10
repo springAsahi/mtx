@@ -10,6 +10,14 @@
 <body>
 <form class="layui-form" lay-filter="form" style="margin-top: 2%;">
     <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">时间</label>
+            <div class="layui-input-inline">
+                <input type="text" name="deal_time"   lay-verify="required" class="layui-input" id="deal_time" placeholder="yyyy-MM-dd">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
         <label class="layui-form-label">公司名称</label>
         <div class="layui-input-block">
             <input type="hidden" name="id">
@@ -40,14 +48,7 @@
             <input type="text" name="amount"  required  lay-verify="required|number" placeholder="请输入金额" autocomplete="off" class="layui-input">
         </div>
     </div>
-    <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">时间</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="deal_time" required  lay-verify="required" class="layui-input" id="deal_time" placeholder="yyyy-MM-dd">
-                </div>
-            </div>
-    </div>
+
     <div class="layui-form-item">
         <div class="layui-input-block">
             <button class="layui-btn" lay-submit id="add" lay-filter="add">添加</button>
@@ -60,8 +61,13 @@
 <script src="//layui.hcwl520.com.cn/layui/layui.js?v=201811010202"></script>
 <script>
 
-    layui.use(['form','upload'], function(){
+    layui.use(['form','laydate'], function(){
+        var laydate = layui.laydate;
         var form = layui.form;
+        //常规用法
+        laydate.render({
+            elem: '#deal_time'
+        });
         //添加
         form.on('submit(add)', function(data){
             data = data.field;
@@ -71,6 +77,7 @@
                 trade_name   : data.trade_name,
                 country   : data.country,
                 amount   : data.amount,
+                deal_time : data.deal_time
             },function (res) {
                 layer.msg(res.msg);
                 setInterval(function(){
@@ -89,6 +96,7 @@
                 trade_name   : data.trade_name,
                 country   : data.country,
                 amount   : data.amount,
+                deal_time : data.deal_time
             },function (res) {
                 layer.msg(res.msg);
                 setInterval(function(){
@@ -111,6 +119,7 @@
                 "trade_name"   : data.trade_name,
                 "country"   : data.country,
                 "amount"   : data.amount,
+                "deal_time" : data.deal_time
             });
 
         });
