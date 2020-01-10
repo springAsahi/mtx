@@ -1,8 +1,13 @@
-layui.use(['layer','table','form','jquery'], function(){
+layui.use(['layer','table','form','jquery','laydate'], function(){
     var table = layui.table,
         layer = layui.layer,
         form  = layui.form,
+        laydate = layui.laydate,
         $ = layui.jquery;
+    //常规用法
+    laydate.render({
+        elem: '#deal_time'
+    });
     //渲染表格
     table.render({
         elem: '#list'

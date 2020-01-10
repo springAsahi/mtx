@@ -151,7 +151,7 @@
             <div class="roll__wrap">
                 <ul class="roll__list">
                     @foreach($rollData as $key => $value)
-                        <li>{{ $value->created_at }}，{{ $value->product_name }}，{{ $value->trade_name }}，${{ $value->amount / 100 }}，{{ $value->country }}，{{ $value->corporate_name }}</li>
+                        <li>{{ $value->deal_time }}，{{ $value->product_name }}，{{ $value->trade_name }}，${{ $value->amount / 100 }}，{{ $value->country }}，{{ $value->corporate_name }}</li>
                     @endforeach
                 </ul>
             </div>
