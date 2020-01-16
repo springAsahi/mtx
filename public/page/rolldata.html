@@ -33,7 +33,18 @@
     <div class="layui-form-item">
         <label class="layui-form-label">行业名称</label>
         <div class="layui-input-block">
-            <input type="text" name="trade_name"  required  lay-verify="required" placeholder="请输入行业名称" autocomplete="off" class="layui-input">
+            <select name="trade_name" lay-verify="required">
+                <option value="">请选择</option>
+                <option value="汽车配件">汽车配件</option>
+                <option value="木质家具">木质家具</option>
+                <option value="农副产品">农副产品</option>
+                <option value="光学电子">光学电子</option>
+                <option value="医疗器械">医疗器械</option>
+                <option value="工艺礼品">工艺礼品</option>
+                <option value="化学工业">化学工业</option>
+                <option value="轻工纺织">轻工纺织</option>
+                <option value="其他行业">其他行业</option>
+            </select>
         </div>
     </div>
     <div class="layui-form-item">
@@ -76,7 +87,7 @@
                 product_name   : data.product_name,
                 trade_name   : data.trade_name,
                 country   : data.country,
-                amount   : data.amount,
+                amount   : data.amount * 100,
                 deal_time : data.deal_time
             },function (res) {
                 layer.msg(res.msg);
@@ -95,7 +106,7 @@
                 product_name   : data.product_name,
                 trade_name   : data.trade_name,
                 country   : data.country,
-                amount   : data.amount,
+                amount   : data.amount * 100,
                 deal_time : data.deal_time
             },function (res) {
                 layer.msg(res.msg);
@@ -118,7 +129,7 @@
                 "product_name"   : data.product_name,
                 "trade_name"   : data.trade_name,
                 "country"   : data.country,
-                "amount"   : data.amount,
+                "amount"   : data.amount / 100,
                 "deal_time" : data.deal_time
             });
 

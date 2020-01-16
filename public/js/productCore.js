@@ -20,7 +20,7 @@ layui.use(['layer','table','form','jquery'], function(){
             ,{field:'product_img_url', width:"12%", title: '产品图片',templet(d){
                     return "<img width='100%' src="+ d.product_img_url+">"
                 }}
-            ,{field:'lowest_order_number', width:"15%", title: '起订量量'}
+            ,{field:'lowest_order_number', width:"15%", title: '起订量'}
             ,{field:'price_low', width:"18%", title: '最低价格',templet(d) {
                     return d.price_low / 100;
                 }}

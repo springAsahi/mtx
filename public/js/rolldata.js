@@ -18,7 +18,9 @@ layui.use(['layer','table','form','jquery','laydate'], function(){
             ,{field:'product_name', width:"16%", title: '产品名称'}
             ,{field:'trade_name', width:"12%", title: '行业名称'}
             ,{field:'country', width:"18%", title: '出口目的地国家'}
-            ,{field:'amount', width:"7%", title: '金额'}
+            ,{field:'amount', width:"7%", title: '金额',templet(d){
+                return "$"+ d.amount / 100;
+                }}
             ,{field:'deal_time', width:"13%", title: '时间'}
             // ,{field:'price_high', width:"23%", title: '最高价格'}
             ,{field: 'right',toolbar: '#barDemo',width:"15%",title: '操作', }
