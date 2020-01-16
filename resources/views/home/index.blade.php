@@ -43,11 +43,11 @@
                     <h3>
                         <img src="/mtx/public/img/01.png" alt="">
                     </h3>
-                    <p>${{ isset($industryData->auto_parts) ? $industryData->auto_parts / 100 : '0' }}</p>
+                    <p>${{ number_format(isset($industryData->auto_parts) ? $industryData->auto_parts / 100 : '0' ,2)}}</p>
                 </div>
                 <section>
                     <h4>汽车配件</h4>
-                    <h5>成交数据总额${{ isset($industryData->auto_parts) ? $industryData->auto_parts / 100 : '0' }}</h5>
+                    <h5>长春市跨境电商线上成交总额${{ number_format(isset($industryData->auto_parts) ? $industryData->auto_parts / 100 : '0' ,2)}}</h5>
                 </section>
             </li>
             <li>
@@ -55,11 +55,11 @@
                     <h3>
                         <img src="/mtx/public/img/02.png" alt="">
                     </h3>
-                    <p>${{ isset($industryData->wooden_furniture) ? $industryData->wooden_furniture / 100 : '0' }}</p>
+                    <p>${{ number_format(isset($industryData->wooden_furniture) ? $industryData->wooden_furniture / 100 : '0' ,2)}}</p>
                 </div>
                 <section>
                     <h4>木质家具</h4>
-                    <h5>成交数据总额${{ isset($industryData->wooden_furniture) ? $industryData->wooden_furniture / 100 : '0' }}</h5>
+                    <h5>长春市跨境电商线上成交总额${{ number_format(isset($industryData->wooden_furniture) ? $industryData->wooden_furniture / 100 : '0',2) }}</h5>
                 </section>
             </li>
             <li>
@@ -67,11 +67,11 @@
                     <h3>
                         <img src="/mtx/public/img/03.png" alt="">
                     </h3>
-                    <p>${{ isset($industryData->agricultural_by_product) ? $industryData->agricultural_by_product / 100 : '0' }}</p>
+                    <p>${{ number_format(isset($industryData->agricultural_by_product) ? $industryData->agricultural_by_product / 100 : '0' ,2)}}</p>
                 </div>
                 <section>
                     <h4>农副产品</h4>
-                    <h5>成交数据总额${{ isset($industryData->agricultural_by_product) ? $industryData->agricultural_by_product / 100 : '0' }}</h5>
+                    <h5>长春市跨境电商线上成交总额${{ number_format(isset($industryData->agricultural_by_product) ? $industryData->agricultural_by_product / 100 : '0',2) }}</h5>
                 </section>
             </li>
             <li>
@@ -79,11 +79,11 @@
                     <h3>
                         <img src="/mtx/public/img/04.png" alt="">
                     </h3>
-                    <p>${{ isset($industryData->optical_electronics) ? $industryData->optical_electronics / 100 : '0' }}</p>
+                    <p>${{ number_format(isset($industryData->optical_electronics) ? $industryData->optical_electronics / 100 : '0' ,2)}}</p>
                 </div>
                 <section>
                     <h4>光学电子</h4>
-                    <h5>成交数据总额${{ isset($industryData->optical_electronics) ? $industryData->optical_electronics / 100 : '0' }}</h5>
+                    <h5>长春市跨境电商线上成交总额${{ number_format(isset($industryData->optical_electronics) ? $industryData->optical_electronics / 100 : '0' ,2)}}</h5>
                 </section>
             </li>
             <li>
@@ -91,11 +91,11 @@
                     <h3>
                         <img src="/mtx/public/img/05.png" alt="">
                     </h3>
-                    <p>${{ isset($industryData->medical_care_apparatus) ? $industryData->medical_care_apparatus / 100 : '0' }}</p>
+                    <p>${{ number_format(isset($industryData->medical_care_apparatus) ? $industryData->medical_care_apparatus / 100 : '0',2) }}</p>
                 </div>
                 <section>
                     <h4>医疗器械</h4>
-                    <h5>成交数据总额${{ isset($industryData->medical_care_apparatus) ? $industryData->medical_care_apparatus / 100 : '0' }}</h5>
+                    <h5>长春市跨境电商线上成交总额${{ number_format(isset($industryData->medical_care_apparatus) ? $industryData->medical_care_apparatus / 100 : '0' ,2)}}</h5>
                 </section>
             </li>
             <li>
@@ -103,11 +103,11 @@
                     <h3>
                         <img src="/mtx/public/img/06.png" alt="">
                     </h3>
-                    <p>${{ isset($industryData->craft_gifts) ? $industryData->craft_gifts / 100 : '0' }}</p>
+                    <p>${{ number_format(isset($industryData->craft_gifts) ? $industryData->craft_gifts / 100 : '0',2 )}}</p>
                 </div>
                 <section>
                     <h4>工艺礼品</h4>
-                    <h5>成交数据总额${{ isset($industryData->craft_gifts) ? $industryData->craft_gifts / 100 : '0' }}</h5>
+                    <h5>长春市跨境电商线上成交总额${{ number_format(isset($industryData->craft_gifts) ? $industryData->craft_gifts / 100 : '0' ,2)}}</h5>
                 </section>
             </li>
             <li>
@@ -115,11 +115,11 @@
                     <h3>
                         <img src="/mtx/public/img/07.png" alt="">
                     </h3>
-                    <p>${{ isset($industryData->chemical_industry) ? $industryData->chemical_industry  / 100 : '0' }}</p>
+                    <p>${{ number_format(isset($industryData->chemical_industry) ? $industryData->chemical_industry  / 100 : '0',2) }}</p>
                 </div>
                 <section>
                     <h4>化学工业</h4>
-                    <h5>成交数据总额${{ isset($industryData->chemical_industry) ? $industryData->chemical_industry  / 100 : '0'  }}</h5>
+                    <h5>长春市跨境电商线上成交总额${{ number_format(isset($industryData->chemical_industry) ? $industryData->chemical_industry  / 100 : '0',2)  }}</h5>
                 </section>
             </li>
             <li>
@@ -127,11 +127,11 @@
                     <h3>
                         <img src="/mtx/public/img/08.png" alt="">
                     </h3>
-                    <p>${{ isset($industryData->light_industry_textile) ?  $industryData->light_industry_textile / 100 : '0' }}</p>
+                    <p>${{ number_format(isset($industryData->light_industry_textile) ?  $industryData->light_industry_textile / 100 : '0' ,2)}}</p>
                 </div>
                 <section>
                     <h4>轻工纺织</h4>
-                    <h5>成交数据总额${{ isset($industryData->light_industry_textile) ?  $industryData->light_industry_textile / 100 : '0' }}</h5>
+                    <h5>长春市跨境电商线上成交总额${{ number_format(isset($industryData->light_industry_textile) ?  $industryData->light_industry_textile / 100 : '0',2 )}}</h5>
                 </section>
             </li>
             <li>
@@ -139,11 +139,11 @@
                     <h3>
                         <img src="/mtx/public/img/09.png" alt="">
                     </h3>
-                    <p>${{ isset($industryData->other) ? $industryData->other / 100 : '0' }}</p>
+                    <p>${{ number_format(isset($industryData->other) ? $industryData->other / 100 : '0' ,2)}}</p>
                 </div>
                 <section>
                     <h4>其他行业</h4>
-                    <h5>成交数据总额${{ isset($industryData->other) ? $industryData->other / 100 : '0' }}</h5>
+                    <h5>长春市跨境电商线上成交总额${{ number_format(isset($industryData->other) ? $industryData->other / 100 : '0' ,2)}}</h5>
                 </section>
             </li>
         </ul>

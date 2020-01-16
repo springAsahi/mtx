@@ -20,7 +20,7 @@ Route::get('/test', 'TestController@test');
  * 后台
  */
 
-Route::get('/admin/login',function (){//登录页面
+Route::get('/admin/alimtxweixin',function (){//登录页面
     return view('admin/login');
 })->name('adminLogin');
 
