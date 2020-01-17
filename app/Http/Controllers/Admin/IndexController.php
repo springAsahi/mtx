@@ -19,8 +19,10 @@ class IndexController extends Controller
     //主页
     public function index(){
         $data = IndustryData::first();
+        $dataTwo = IndustryData::find(2);
         return view('admin/index',[
-            'data' => $data
+            'data' => $data,
+            'dataTwo' => $dataTwo
         ]);
     }
     //上传图片
