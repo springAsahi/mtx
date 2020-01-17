@@ -1,6 +1,7 @@
 @extends('admin.layui')
 @section('content')
     <form class="layui-form">
+        <h2 style="padding-left: 50px; margin-bottom: 10px;"><span>吉林省</span><span style="margin-left: 300px;">长春市</span></h2>
         <div class="layui-form-item">
             <label class="layui-form-label">汽配</label>
             <div class="layui-input-block" style="float: left; margin-left:0;">

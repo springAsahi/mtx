@@ -17,10 +17,12 @@ class IndexController extends Controller
 {
     public function index(){
         $rollData     = RollData::get();
-        $industryData = IndustryData::first();
+        $industryDataOne = IndustryData::find(1);
+        $industryDataTwo = IndustryData::find(2);
         return view('home.index',[
             'rollData'     => $rollData,
-            'industryData' => $industryData
+            'industryDataOne' => $industryDataOne,
+            'industryDataTwo' => $industryDataTwo
         ]);
     }
 }
